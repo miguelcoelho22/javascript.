@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>primeiro documento js</title>
+    <style>
+        #bloco {
+            background-color: rgb(163, 97, 11);
+            width: 150px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        var n1 = Number(window.prompt('digite o numero'))
-        var n2 = Number(window.prompt('digite o outro numero'))
-        var s = n1 + n2
-        document.write(`a soma entre ${n1} e ${n2} é ${s}`)
-    </script>
-    </script>
+    <h1>primeira vez js</h1>
+    <div id="bloco" onclick="clique()" onmouseover="entrou()">
+        <p>clique em mim</p>
+        <script>
+            function clique() {
+                var x = window.document.querySelector('#bloco')
+                x.innerHTML = 'merda'
+            }
+            function entrou() {
+                var y = window.document.querySelector('#bloco')
+                y.style.background = 'green'
+
+            }
+
+
+        </script>
+    </div>
 </body>
 </html>

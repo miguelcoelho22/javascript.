@@ -16,20 +16,17 @@
 </head>
 <body>
     <h1>primeira vez js</h1>
-    <div id="bloco" onclick="clique()" onmouseover="entrou()">
+    <div id="bloco" onclick="clique()" onmouseover="passou()">
         <p>clique em mim</p>
         <script>
-            function clique() {
-                var x = window.document.querySelector('#bloco')
-                x.innerHTML = 'merda'
-            }
-            function entrou() {
-                var y = window.document.querySelector('#bloco')
-                y.style.background = 'green'
-
-            }
-
-
+         function clique() {
+            var x = document.querySelector('#bloco')
+            x.innerHTML = 'entrou'
+         }
+         function passou() {
+            var y = document.querySelector('#bloco')
+            y.style.background = 'blue'
+         }
         </script>
     </div>
 </body>

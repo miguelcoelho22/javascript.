@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificados de Idade</h1>
+    </header>
+    <main>
+        <section>
+            <div id="texto">
+                <form action="projeto.js" method="post">
+                    <label for="num">ano de nascimento:</label>
+                    <input type="number" name="inum" id="num"><br>
+
+                    <p class="conf" >
+                        sexo:
+                        <input type="radio" name="sex" id="mas" checked>
+                        <label for="mas">masculino</label>
+                        <input type="radio" name="sex" id="fem">
+                        <label for="fem">feminino</label>
+                    </p>
+
+                    <input class="conf" type="button" value="verificar" onclick="clicou()">
+                </form>
+            </div>
+            <div id="imagem">
+                <p>preencha os dados acima para ver o resultado </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>criado por <a href="#">miguel coelho</a></p>
+    </footer>
+    <script src="projeto.js"></script>
+</body>
+</html>

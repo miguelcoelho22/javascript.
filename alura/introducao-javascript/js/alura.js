@@ -33,6 +33,7 @@ for(var x = 0; x < pacientes.length; x += 1) {
         imctxt.textContent = imc
     } 
 }
+
 function calculaimc(peso,altura) {
     var imc = 0
     imc = peso/(altura**2)

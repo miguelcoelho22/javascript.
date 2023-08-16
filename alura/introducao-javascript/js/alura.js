@@ -12,17 +12,15 @@ for(var x = 0; x < pacientes.length; x += 1) {
     
     var imctxt = pa.querySelector('.info-imc') 
 
-    var pesocerto = true // alert se for falso
-    var alturacerta = true
+    var pesocerto = pesohevalido(peso)
+    var alturacerta = alturahecerta(altura)
 
-    if (peso <= 0 || peso >= 400) {
-        pesocerto = false
+        if(!pesocerto) {
         imctxt.textContent = 'peso invalido'
         pa.classList.add('paciente-invalido')
     }   
 
-    if (altura <= 0 || altura >= 2.5) {
-        alturacerta = false
+    if(!alturacerta) {
         imctxt.textContent = 'altura invalida'
         pa.classList.add('paciente-invalido')
         
@@ -34,6 +32,21 @@ for(var x = 0; x < pacientes.length; x += 1) {
     } 
 }
 
+function pesohevalido(peso){
+    if(peso >= 0 && peso < 600){
+        return true
+    }else{                                                                      
+        return false
+    }
+}
+
+function alturahecerta(altura) {
+    if(altura >= 0 && altura < 3){
+        return true
+    }else {
+        return false
+    }
+}
 function calculaimc(peso,altura) {
     var imc = 0
     imc = peso/(altura**2)

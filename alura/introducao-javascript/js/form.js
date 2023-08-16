@@ -12,17 +12,37 @@ botao.addEventListener('click', function(event) {
 
     else {
         var paciente = dadosDoPaciente(form)
-        
+
+        var erros = validapaciente(paciente)
+        if(erros.length > 0){
+            exibeerro(erros)
+            return
+        }
+
         var pacientetr = montaTr(paciente)
         
         var tabela = document.querySelector('#tabela-pacientes')
-
         tabela.appendChild(pacientetr)
 
         form.reset()
+        var retirarerro = document.querySelector('#mensagens-erro')
+        retirarerro.innerHTML = ''
+
     }
 })
 
+function exibeerro(erros) {
+    var ul = document.querySelector("#mensagens-erro")
+    ul.innerHTML = ''
+
+    for(var i = 0;i < erros.length; i++){
+        var li = document.createElement('li')
+        var erro = erros[i]
+        li.textContent = erro
+        ul.appendChild(li)
+        li.classList.add('erro-css')
+    }
+}
 function dadosDoPaciente(form) {
 
     var paciente = {
@@ -59,3 +79,12 @@ function montaTd(dado, classe) {
     return td
 }
 
+function validapaciente(paciente) {
+    var erros = []
+
+    if(!pesohevalido(paciente.peso)) erros.push('peso é invalido')
+        
+    if(!alturahecerta(paciente.altura)) erros.push('altura é invalida')
+
+    return erros
+}

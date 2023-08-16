@@ -136,3 +136,9 @@ button[disabled=disabled], button:disabled {
 .paciente-invalido {
 	background-color: orange;
 }
+.erro-css {
+	background-color: orange;
+	color: white;
+	padding-bottom: 10px;
+	
+}

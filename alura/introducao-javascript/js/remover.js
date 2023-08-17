@@ -1,9 +1,6 @@
-var pacientes = document.querySelectorAll('#paciente')
+var tabela = document.querySelector('#tabela-pacientes')
 
-for(var i = 0; i < pacientes.length; i++){
-    var paciente = pacientes[i]
-    paciente.addEventListener('dblclick', function(){
-        console.log('fui clicado 2 vezes')
-    })
-
-}
+tabela.addEventListener('dblclick', function(event){
+    var solo = event.target
+    var todo = solo.parentNode.remove()
+})

@@ -1,6 +1,8 @@
 var tabela = document.querySelector('#tabela-pacientes')
 
-tabela.addEventListener('dblclick', function(event){
-    var solo = event.target
-    var todo = solo.parentNode.remove()
-})
+tabela.addEventListener('dblclick',function(event){
+    event.target.parentNode.classList.add('fade')
+    
+    setTimeout(function(){
+        event.target.parentNode.remove()
+    }, 400)})

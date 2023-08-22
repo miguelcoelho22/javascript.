@@ -1,26 +1,16 @@
 var filtro = document.querySelector('#filtrar-tabela')
-var paciente = document.querySelectorAll('.paciente')
+var pacientes = document.querySelectorAll('.paciente')
 
-filtro.addEventListener('input', function(){
-    console.log(this.value)
-    if(this.value.length > 0) {
-        for(var i = 0; i < paciente.length; i++){
-            var pacientes = paciente[i]
-            var nometd = pacientes.querySelector('.info-nome')
-            var nome = nometd.textContent
-            console.log(nome)
-            if(nome != this.value) {
-                pacientes.classList.add('esconder')
-            }else{
-                pacientes.classList.remove('esconder')
-            }
-            
-            }
-    } else {
-        for(var i = 0; i < paciente.length; i++){
-        var pacientes = paciente[i]
-        pacientes.classList.remove('esconder')
+filtro.addEventListener('input',function(){
+    for(var i = 0; i < pacientes.length; i++){
+        var paciente = pacientes[i]
+        var nometd = paciente.querySelector('.info-nome')
+        var nome = nometd.textContent
+        var expressao = new RegExp(this.value, 'i')
+        if(expressao.test(nome)){
+            paciente.classList.remove('esconder')
+        }else{
+            paciente.classList.add('esconder')
+        }
     }
-    
-    }
-}) 
+})

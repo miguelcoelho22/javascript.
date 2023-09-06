@@ -1,13 +1,9 @@
-let botao = document.querySelector('#botao')
-let n1 = document.querySelector('#num')
-let n2 = document.querySelector('#nom')
+const notas = [1, 2, 4, 5]
+let media = 0
+for(let x = 0; x < notas.length; x++){
+    let pos = notas[x]
+    media += pos
 
-var resultado = document.querySelector('#resultado')
-
-botao.addEventListener('click', function() {
-    let soma = Number(n1.value) + Number(n2.value)
-    resultado.textContent = soma
-    if( soma < 0) {
-        resultado.classList.add('vermelho')
-    }
-})
+}
+let total = media/notas.length
+console.log(total)

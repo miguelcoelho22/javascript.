@@ -1,11 +1,5 @@
-let dados = {
-    nome: 'miguel',
-    idade: 18,
-    telefone: 37998644777,
-}
+const numeros = [ 2, 4, 7, 8, 3, 5]
 
+const numerospares = numeros.filter(numero => numero % 2 == 0)
 
-dados.cpf = [94239429492]
-
-dados['idade']
-console.log(dados['idade'])
+console.log(numerospares)

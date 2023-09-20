@@ -1,22 +1,18 @@
-
-function clicou() {
-    let num = document.querySelector('#num')
-    let texto = document.querySelector('#tabuada')
-
-    if (num.value.length == 0) {
-        window.alert('erro, voce nao digitou um numero')
-    }
-    else {
-        let c = 1
-        let x = Number(num.value)
-        while (c <= 10) {
-            let y = c * x
-            let item = document.createElement('option')
-            item.text = `${x} * ${c} = ${y} `
-            texto.appendChild(item)
-
-            c += 1
-            
-        }
-    }
+const cliente = {
+    nome: 'miguel',
+    cpf: 13351752610,
+    saldo: 200,
 }
+
+cliente.idade = [{
+    miguel: 18,
+}]
+
+cliente.idade.push({
+    mariana: 22,
+    enio: 20,
+    alcineia: 16,
+})
+const maiordeidade = cliente.idade.filter(elemento => elemento.mariana >= 18)
+
+console.log(maiordeidade)

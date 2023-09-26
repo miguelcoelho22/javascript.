@@ -1,18 +1,14 @@
-const cliente = {
-    nome: 'miguel',
-    cpf: 13351752610,
-    saldo: 200,
+function embaralhar(str) {
+    let strseparada = str.split('')
+    let resultado = []
+
+    while(strseparada.length){
+        let numero = parseInt(Math.random() * strseparada.length)
+        let selecionada = strseparada.splice(numero, 1)[0]
+
+       resultado.push(selecionada)
+    }
+    return resultado.join('')
 }
 
-cliente.idade = [{
-    miguel: 18,
-}]
-
-cliente.idade.push({
-    mariana: 22,
-    enio: 20,
-    alcineia: 16,
-})
-const maiordeidade = cliente.idade.filter(elemento => elemento.mariana >= 18)
-
-console.log(maiordeidade)
+console.log(embaralhar('javascript'))

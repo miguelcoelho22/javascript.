@@ -1,14 +1,7 @@
-function embaralhar(str) {
-    let strseparada = str.split('')
-    let resultado = []
 
-    while(strseparada.length){
-        let numero = parseInt(Math.random() * strseparada.length)
-        let selecionada = strseparada.splice(numero, 1)[0]
-
-       resultado.push(selecionada)
-    }
-    return resultado.join('')
+let cliente = {
+    nome: 'miguel',
+    idade: 18,
 }
 
-console.log(embaralhar('javascript'))
+console.log(cliente.nome)

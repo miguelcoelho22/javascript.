@@ -1,5 +1,9 @@
-const numeros = [ 2, 4, 7, 8, 3, 5]
+const dados = require('./clientes.json')
 
-const numerospares = numeros.filter(numero => numero % 2 == 0)
+ function encontrar (lista, chave, valor){
+    return lista.find((item) => item[chave].includes(valor))
+ }
 
-console.log(numerospares)
+ let pessoa = encontrar(dados, 'nome', 'Olva')
+
+ console.log(pessoa)

@@ -12,22 +12,14 @@
     </header>
     <section>
         <div id="texto">
-            <p>ano de nascimento:
-                <input type="number" name="txtano" id="txtano" min="0">
-            </p>
-
-            <p>sexo:
-                <input type="radio" name="radsex" id="mas">
-                <label for="mas">masculino</label>
-                <input type="radio" name="radsex" id="fem">
-                <label for="fem">feminino</label>
-            </p>
-            <p>
-                <input type="button" value="confirmar" onclick="verificar()">
+            <p>numero: <input type="number" name="inum" id="numero">
+                <input type="button" value="gerar tabuada" onclick="verificar()">
             </p>
         </div>
         <div id="resultado">
-            
+            <table id="tabuada" border="1">
+
+            </table>
         </div>
     </section>
     <footer>
